@@ -1,0 +1,38 @@
+[
+  {
+    "id": 17,
+    "name": "nueva Categoria de informatica"
+  },
+  {
+    "id": 18,
+    "name": "Ciencias Sociales y Humanas"
+  },
+  {
+    "id": 19,
+    "name": "Ciencias Exactas y Naturales"
+  },
+  {
+    "id": 20,
+    "name": "Ciencias de la Salud"
+  },
+  {
+    "id": 21,
+    "name": "Ingenierías y Tecnología"
+  },
+  {
+    "id": 22,
+    "name": "Artes y Humanidades"
+  },
+  {
+    "id": 23,
+    "name": "Ciencias Económicas y Administración"
+  },
+  {
+    "id": 24,
+    "name": "Ciencias Agrarias y Ambientales"
+  },
+  {
+    "id": 26,
+    "name": "Educación"
+  }
+]
