@@ -552,96 +552,86 @@ async function updateCareerService(id, careerData) {
 
 // ================Servicios para Carreras=============================
 // ===========================================================================================
-// ====================================================================
+// ==========================CRUD PARA CARRERAS (FUNCIONES)==================================
 
 
 
 //REGISTRO DE CARRERAS
-// async function registerCareer() {
-//     const id = document.getElementById('careerId').value;
-//     const name = document.getElementById('registerName').value.trim();
-//     const code = document.getElementById('careerCode').value.trim();
-//     const duration = document.getElementById('careerDuration').value.trim();
-//     const category = document.getElementById('careerCategory').value;
-//     const modality = document.getElementById('careerModality').value;
-//     // Log de los datos a registrar
-//     if (!name || !duration || !category || !modality) {
-//         Swal.fire({ icon: 'error', title: 'Error', text: 'Completa todos los campos obligatorios.' });
-//         return;
-//     }
-//     // Log de los datos a enviar
-//     const data = { name, code, duration, category, modality }; // Asegúrate de enviar todos los campos si los usas
-//     console.log("UI: Datos a enviar:", data);
-//     // Verifica si estamos en modo edición o registro
-//     try {
-//         let result;
-//         if (id) {
-//             console.log("UI: Modo edición. Actualizando carrera ID:", id);
-//             result = await updateCareerService(id, data);
-//         } else {
-//             console.log("UI: Modo registro. Creando nueva carrera.");
-//             result = await registerCareerService(data);
-//         }
-//         // Log de la respuesta del backend
-//         if (result.error) {
-//             throw new Error(result.error);
-//         }
-//         // Muestra un mensaje de éxito
-//         Swal.fire({ icon: 'success', title: 'Éxito', text: id ? 'Carrera actualizada.' : 'Carrera registrada.' });
-//         // Limpia el formulario    
-//         document.getElementById('careerForm').reset();
-//         document.getElementById('careerId').value = '';
-//         // Resetea el botón del formulario
-//         const btn = document.querySelector('#careerForm button[type="submit"]');
-//         btn.innerHTML = `<i class="fas fa-save me-1"></i>Registrar`;
-//         btn.classList.remove('btn-success');
-//         btn.classList.add('btn-primary');
-//         // Carga nuevamente la tabla de carreras
-//         loadCareersTable();
-//         // Carga las categorías en el select del formulario de carreras
-//     } catch (error) {
-//         console.error("UI: Error en la operación:", error);
-//         Swal.fire({ icon: 'error', title: 'Error', text: error.message || 'No se pudo completar la operación.' });
-//     }
-// }
 async function registerCareer() {
+    console.log("📌 UI: Iniciando proceso de registro de carrera...");
+
     const id = document.getElementById('careerId').value;
     const name = document.getElementById('registerName').value.trim();
     const code = document.getElementById('careerCode').value.trim();
     const duration = document.getElementById('careerDuration').value.trim();
     const category = document.getElementById('careerCategory').value;
     const modality = document.getElementById('careerModality').value;
+
+    console.log("📥 UI: Datos recolectados del formulario:", {
+        id, name, code, duration, category, modality
+    });
+
+    // Validación
     if (!name || !duration || !category || !modality) {
-        Swal.fire({ icon: 'error', title: 'Error', text: 'Completa todos los campos obligatorios.' });
+        console.warn("⚠️ UI: Validación fallida. Campos faltantes:", {
+            name, duration, category, modality
+        });
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Completa todos los campos obligatorios.'
+        });
         return;
     }
+
     const data = { name, code, duration, category, modality };
-    console.log("UI: Datos a enviar:", data);
+    console.log("📦 UI: Datos listos para enviar al backend:", data);
+
     try {
         let result;
+
         if (id) {
-            console.log("UI: Modo edición. Actualizando carrera ID:", id);
+            console.log("🔁 UI: Modo edición. Actualizando carrera con ID:", id);
             result = await updateCareerService(id, data);
         } else {
-            console.log("UI: Modo registro. Creando nueva carrera.");
+            console.log("🆕 UI: Modo registro. Registrando nueva carrera...");
             result = await registerCareerService(data);
         }
+
+        console.log("✅ UI: Respuesta recibida del backend:", result);
+
         if (result.error) {
+            console.error("❌ UI: Error del backend:", result.error);
             throw new Error(result.error);
         }
-        Swal.fire({ icon: 'success', title: 'Éxito', text: id ? 'Carrera actualizada.' : 'Carrera registrada.' });
-        await loadCareersTable(); // Carga nuevamente la tabla de carreras
+
+        // Mensaje de éxito
+        Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: id ? 'Carrera actualizada.' : 'Carrera registrada.'
+        });
+
+        // Limpieza del formulario
+        console.log("🧹 UI: Limpiando formulario...");
         document.getElementById('careerForm').reset();
         document.getElementById('careerId').value = '';
+
         const btn = document.querySelector('#careerForm button[type="submit"]');
         btn.innerHTML = `<i class="fas fa-save me-1"></i>Registrar`;
         btn.classList.remove('btn-success');
         btn.classList.add('btn-primary');
-        // === AQUÍ, CON await ===
+
+        console.log("📄 UI: Recargando tabla de carreras...");
         await loadCareersTable();
+
     } catch (error) {
-        console.error("UI: Error en la operación:", error);
-        Swal.fire({ icon: 'error', title: 'Error', text: error.message || 'No se pudo completar la operación.' });
+        console.error("💥 UI: Excepción durante el registro:", error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: error.message || 'No se pudo completar la operación.'
+        });
     }
 }
 

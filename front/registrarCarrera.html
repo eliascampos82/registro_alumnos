@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro y Gestión de Carreras</title>
 
-  <!-- CSS de terceros -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- DataTables Bootstrap 5 CSS -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
+<!-- DataTables Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css">
+    <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script defer src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
   <!-- Tu propio CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -115,7 +117,6 @@
                   <button type="submit" class="btn btn-primary">Buscar</button>
               </div>
             </form>
-             
             <div id="getResult" class="mt-4"></div>
           </div>
         </div>
@@ -131,7 +132,9 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-hover align-middle" id="careersTable" class="table table-striped">
+              <!-- <table class="table table-hover align-middle" id="careersTable" class="table table-striped"> -->
+                <table id="careersTable" class="table table-hover align-middle table-striped">
+
                 <thead class="table-dark">
                   <tr>
                     <th>ID</th>
@@ -173,18 +176,9 @@
         </div>
     </footer>
 
-  <!-- SCRIPTS externos -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-  <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<!-- DataTables JS -->
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-  <!-- Tu lógica de front separada -->
-  <script src="app.js"></script>
+ <!-- //JS DE BOOTSTRAP Y SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
