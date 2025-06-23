@@ -1,1 +1,117 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "dihuen",
+    "career": "Tecnologías de la Información"
+  },
+  {
+    "id": 2,
+    "name": "juanma",
+    "career": "Ciencia de Datos"
+  },
+  {
+    "id": 3,
+    "name": "skaksak",
+    "career": "Ingeniería de Software"
+  },
+  {
+    "id": 4,
+    "name": "ia",
+    "career": "Ciencias de la Computación"
+  },
+  {
+    "id": 8,
+    "name": "enzo",
+    "career": "Ciencia de Datos"
+  },
+  {
+    "id": 12,
+    "name": "juan",
+    "career": "informatica"
+  },
+  {
+    "id": 13,
+    "name": "carlos",
+    "career": "informatica"
+  },
+  {
+    "id": 14,
+    "name": "FRANCISCO ELIAS CAMPOS",
+    "career": "informatica"
+  },
+  {
+    "id": 16,
+    "name": "elias campos",
+    "career": "informatica"
+  },
+  {
+    "id": 17,
+    "name": "elias campos",
+    "career": "Medicina"
+  },
+  {
+    "id": 19,
+    "name": "cristiano ronaldo",
+    "career": "Música"
+  },
+  {
+    "id": 20,
+    "name": "rodrigo de paul",
+    "career": "Medicina"
+  },
+  {
+    "id": 21,
+    "name": "FRANCISCO ELIAS CAMPOS",
+    "career": "Tecnicatura en Analisis de Datos e IA"
+  },
+  {
+    "id": 22,
+    "name": "tiago mcgiver",
+    "career": "Tecnicatura en Analisis de Datos e IA"
+  },
+  {
+    "id": 23,
+    "name": "dfsdfsdfsdf",
+    "career": "Ingeniería en Sistemas"
+  },
+  {
+    "id": 24,
+    "name": "sefsdfsdf",
+    "career": "Comunicación Social"
+  },
+  {
+    "id": 25,
+    "name": "wrer",
+    "career": "Comunicación Social"
+  },
+  {
+    "id": 26,
+    "name": "tiago mcgiver maidana",
+    "career": "Ingeniería Civil"
+  },
+  {
+    "id": 27,
+    "name": "RSTRTERTETERT",
+    "career": "Ingeniería en Sistemas"
+  },
+  {
+    "id": 28,
+    "name": "KUMI CAMPOS",
+    "career": "Biología"
+  },
+  {
+    "id": 29,
+    "name": "VVVVVVVVVVVVVVVVVVVVV",
+    "career": "informatica"
+  },
+  {
+    "id": 30,
+    "name": "lautaro martinez",
+    "career": "Química"
+  },
+  {
+    "id": 31,
+    "name": "FRANCISCO ELIAS CAMPOS1111",
+    "career": "Comunicación Social"
+  }
+]
