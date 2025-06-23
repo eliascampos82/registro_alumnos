@@ -1499,7 +1499,6 @@ function resetCategoryForm() {
 // La función se utiliza para mostrar los detalles de una categoría en la UI.
 // =========================⬇️⬇️⬇️⬇️============================================
 
-
 // Obtiene una categoría por ID y muestra sus detalles en la UI
 async function getCategoryByIdUI(id) {
     try {
@@ -1648,7 +1647,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//breve explicacion de lo que hace este archivo
+// breve explicacion de lo que hace este archivo
 
 
 // El sistema es una gestión integral para estudiantes carreras y 
@@ -1699,7 +1698,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//Se debe utilizar al menos un modelo de IA para optimizar el avance del trabajo practico
+// Se debe utilizar al menos un modelo de IA para optimizar el avance del trabajo practico
 // Detallar en un archivo que modelos se utilizar y los promts que más resultados positivos les dieron.
 
 
